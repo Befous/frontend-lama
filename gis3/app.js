@@ -109,14 +109,14 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(data => {
             data.features.forEach(feature => {
-                if (feature.geometry.type === "Point") {
+                if (feature.location.type === "Point") {
                     const row = pointTable.insertRow();
                     const nameCell = row.insertCell(0);
                     const coordinatesCell = row.insertCell(1);
                     const typeCell = row.insertCell(2);
                     nameCell.innerText = feature.properties.name;
-                    coordinatesCell.innerText = JSON.stringify(feature.geometry.coordinates);
-                    typeCell.innerText = feature.geometry.type;
+                    coordinatesCell.innerText = JSON.stringify(feature.location.coordinates);
+                    typeCell.innerText = feature.location.type;
                     
                 }
             });
@@ -167,3 +167,5 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Terjadi kesalahan:", error));
 });
+
+//==================================================================
