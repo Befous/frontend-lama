@@ -4,7 +4,7 @@ const hasil = document.getElementById('hasil');
 // Fungsi untuk mengambil data dari API
 async function ambilDataDariAPI() {
     try {
-        const response = await fetch('https://us-central1-gis3-401509.cloudfunctions.net/manggilmongo');
+        const response = await fetch('https://us-central1-gis3-401509.cloudfunctions.net/helloworld');
         const data = await response.text(); // Menggunakan response.text() untuk mengambil teks respons
 
         // Tampilkan data di dalam elemen hasil
