@@ -17,3 +17,16 @@
     background-color: gray;
 }
 
+.center {
+    margin-left: 300px;
+    width: 55%;
+    font-size: 30px;
+}
+
+#map {
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;
+  width: fit-content;
+  position:relative;
+}
