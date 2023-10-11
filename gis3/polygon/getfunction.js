@@ -1,7 +1,7 @@
 
 import {setInner,addChild } from "https://jscroot.github.io/element/croot.js";
 
-export let URLGeoJson = "https://us-central1-gis3-401509.cloudfunctions.net/ambilpolyline";
+export let URLGeoJson = "https://us-central1-gis3-401509.cloudfunctions.net/ambilpolygon";
 export let tableTag="tr";
 export let tableRowClass="content is-small";
 export let tableTemplate=`
