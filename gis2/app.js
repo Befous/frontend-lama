@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         source: waypointSource,
         style: new ol.style.Style({
             image: new ol.style.Circle({
-                radius: 5,
+                radius: 3,
                 fill: new ol.style.Fill({
                     color: 'blue'
                 })
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         style: new ol.style.Style({
             stroke: new ol.style.Stroke({
                 color: 'black',
-                width: 5
+                width: 1
                 
             })
         })
