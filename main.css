@@ -1,0 +1,19 @@
+.home{
+    padding: 8px 20px;
+    border-radius: 27px;
+  }
+.home:hover{
+    padding: 8px 20px;
+    border-radius: 27px;
+    background-color: gray;
+}
+.tombol{
+    padding: 8px 20px;
+    border-radius: 27px;
+  }
+.tombol:hover{
+    padding: 8px 20px;
+    border-radius: 27px;
+    background-color: gray;
+}
+
