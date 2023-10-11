@@ -13,7 +13,7 @@ class MyHeader extends HTMLElement {
                   <a class="nav-link" href="https://befous.github.io/gis1/">Tugas Minggu 1<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="https://befous.github.io/gis1/">Tugas Minggu 2<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="https://befous.github.io/gis2/">Tugas Minggu 2<span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item active">
                     <a class="nav-link" href="https://befous.github.io/gis3/">Tugas Minggu 3<span class="sr-only">(current)</span></a>
