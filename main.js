@@ -19,10 +19,7 @@ class MyHeader extends HTMLElement {
               <a class="nav-link tombol" href="https://befous.github.io/gis3/">Tugas Minggu 3<span class="sr-only">(current)</span></a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        <input type="text" name="" id="myInput" placeholder="Search..."></input>
       </div>
     </nav>
     <br><br><br>
