@@ -18,6 +18,9 @@ class MyHeader extends HTMLElement {
             <li class="nav-item active">
               <a class="nav-link tombol" href="https://befous.github.io/gis3/">Tugas Minggu 3<span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item active">
+              <a class="nav-link tombol" href="https://befous.github.io/gis4/">Tugas Minggu 4<span class="sr-only">(current)</span></a>
+            </li>
         </ul>
         <input type="text" name="" id="myInput" placeholder="Search..."></input>
       </div>
