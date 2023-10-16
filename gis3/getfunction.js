@@ -1,5 +1,5 @@
 
-import {setInner,addChild } from "https://jscroot.github.io/element/croot.js";
+import {addChild } from "https://jscroot.github.io/element/croot.js";
 
 export let URLGeoJson = "https://us-central1-gis3-401509.cloudfunctions.net/manggilmongo";
 export let tableTag="tr";
