@@ -25,6 +25,9 @@
     <!--====== Tailwind CSS ======-->
     <link rel="stylesheet" href="assets/css/tailwindcss.css">
 
+    <!--====== CSS Buatan Sendiri ======-->
+    <link rel="stylesheet" href="assets/css/butansendiri.css">
+
 </head>
 
 <body>
@@ -123,112 +126,60 @@
     
     <!--====== LOGIN PART START ======-->
 
-    <section class="services_area pt-120" id="login">
-        <div class="container">
-            <div class="row justify-center">
-                <div class="w-full lg:w-1/2">
-                    <div class="section_title text-center pb-6">
-                        <h5 class="sub_title">About</h5>
-                        <h4 class="main_title">Work Process</h4>
-                    </div> <!-- section title -->
+    <section class="pt-120" id="login">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form>
+                <div class="user-box">
+                    <input type="text" id="username" name="username">
+                    <label>Username</label>
                 </div>
-            </div> <!-- row -->
-            <div class="row justify-center">
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
-                        <div class="services_icon">
-                            <i class="lni lni-write"></i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
-                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12" d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
-                            </svg>
-                        </div>
-                        <div class="services_content mt-5">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-3xl">Research</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
-                        </div>
-                    </div> <!-- single services -->
+                <div class="user-box">
+                    <input type="password" id="password" name="password">
+                    <label>Password</label>
                 </div>
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
-                        <div class="services_icon">
-                            <i class="lni lni-bulb"></i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
-                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12" d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
-                            </svg>
-                        </div>
-                        <div class="services_content mt-5">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-3xl">Prototype</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
-                        <div class="services_icon">
-                            <i class="lni lni-checkmark-circle"></i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
-                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12" d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
-                            </svg>
-                        </div>
-                        <div class="services_content mt-5">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-3xl">Build</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
+                <a type="submit" id="button"  onclick="PostSignUp()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Submit
+                </a>
+                <div style="visibility: hidden;" class="container">
+                    <div class="notification is-primary" id="surat"></div>
+                   </div>
+            </form>
+        </div>
     </section>
 
     <!--====== LOGIN PART ENDS ======-->
 
     <!--====== REGISTRASI PART START ======-->
 
-<section id="registrasi" class="about_area pt-120 relative">
-    <div class="about_image flex items-end justify-end">
-        <div class="image lg:pr-13">
-            <img src="assets/images/about.svg" alt="about">
-        </div>
-    </div> <!-- about image -->
-    <div class="container">
-        <div class="row justify-end">
-            <div class="w-full lg:w-1/2">
-                <div class="about_content mx-4 pt-11 lg:pt-15 lg:pb-15">
-                    <div class="section_title pb-9">
-                        <h5 class="sub_title">Why Choose Us</h5>
-                        <h4 class="main_title">Your Goal is Our Achievement</h4>
-                    </div> <!-- section title -->
-                    <p>Nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua. At vero eos et accusam et justo duo dolores et rebum. Stet clita kasd gubergren, no sea takimata sanctus. </p>
-                    <ul class="about_list pt-3">
-                        <li class="flex mt-5">
-                            <div class="about_check">
-                                <i class="lni lni-checkmark-circle"></i>
-                            </div>
-                            <div class="about_list_content pl-5 pr-2">
-                                <p>Vero eos et accusam et justo duo dolores et rebum. Stet clita kasd gubergrenv</p>
-                            </div>
-                        </li>
-                        <li class="flex mt-5">
-                            <div class="about_check">
-                                <i class="lni lni-checkmark-circle"></i>
-                            </div>
-                            <div class="about_list_content pl-5 pr-2">
-                                <p>At vero eos et accusam et justo duo dolores et rebum. Stet clita kasd gubergrenv</p>
-                            </div>
-                        </li>
-                        <li class="flex mt-5">
-                            <div class="about_check">
-                                <i class="lni lni-checkmark-circle"></i>
-                            </div>
-                            <div class="about_list_content pl-5 pr-2">
-                                <p>Dvero eos et accusam et justo duo dolores et rebum. Stet clita kasd gubergrenv</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div> <!-- about content -->
+<section id="registrasi" class="pt-150 relative">
+    <div class="login-box">
+        <h2>Registrasi</h2>
+        <form>
+            <div class="user-box">
+                <input type="text" id="user1name" name="user1name" required>
+                <label>Username</label>
             </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
+            <div class="user-box">
+                <input type="password" id="pass1word" name="pass1word" required>
+                <label>Password</label>
+            </div>
+            <a type="submit" id="registerButton">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </a>
+            <div class="container">
+                <div class="notification is-primary" id="surat"></div>
+               </div>
+        </form>
+    </div>
 </section>
 
     <!--====== REGISTRASI PART ENDS ======-->
@@ -555,6 +506,18 @@
 
     <!--====== TEAM PART ENDS ======-->
 
+    <section id="berhasil-login" class="team_area bg-gray pt-120 pb-120">
+        <h1>Berhasil Login</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+
+    <section id="gagal-login" class="team_area bg-gray pt-120 pb-120">
+        <h1>Gagal Login</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+
+    <section id="berhasil-registrasi" class="team_area bg-gray pt-120 pb-120">
+        <h1>Berhasil Registrasi</h1>
+    </section>
+
     <!--====== FOOTER PART START ======-->
 
     <my-footer></my-footer>
@@ -597,6 +560,49 @@
 
     <!--====== Main js ======-->
     <script src="assets/js/template.js"></script>
+
+    <!--====== Main js ======-->
+    <script type="module" src="assets/js/post.js"></script>
+
+    <script>
+        document.getElementById("registerButton").addEventListener("click", register);
+
+function register() {
+    const apiUrl = "https://asia-southeast2-gis3-401509.cloudfunctions.net/MembuatUser";
+    const username = document.getElementById("user1name").value;
+    const password = document.getElementById("pass1word").value;
+
+    const data = {
+        username: username,
+        password: password,
+        role: "user"
+    };
+
+    fetch(apiUrl, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Pendaftaran gagal');
+        }
+    })
+    .then(status => {
+        if (status.true) {
+        } else {
+            window.location.href = "#berhasil-registrasi";
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+}
+    </script>
 </body>
 
 </html>
