@@ -24,10 +24,16 @@ class MyHeader extends HTMLElement {
                                         <a class="page-scroll active" href="#home">Home</a>
                                     </li>
                                     <li class="nav-item ml-5 lg:ml-11">
-                                        <a class="page-scroll" href="#login">Login</a>
+                                        <a class="page-scroll" href="#loginuser">Login User</a>
                                     </li>
                                     <li class="nav-item ml-5 lg:ml-11">
-                                        <a class="page-scroll" href="#registrasi">Registrasi</a>
+                                        <a class="page-scroll" href="#loginadmin">Login Admin</a>
+                                    </li>
+                                    <li class="nav-item ml-5 lg:ml-11">
+                                        <a class="page-scroll" href="#registrasi-user">Registrasi User</a>
+                                    </li>
+                                    <li class="nav-item ml-5 lg:ml-11">
+                                        <a class="page-scroll" href="#registrasi-admin">Registrasi Admin</a>
                                     </li>
                                     <li class="nav-item ml-5 lg:ml-11">
                                         <a class="page-scroll" href="#profile">Profile</a>

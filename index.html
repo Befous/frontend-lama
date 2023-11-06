@@ -124,21 +124,21 @@
 
     <!--====== HOME PART ENDS ======-->
     
-    <!--====== LOGIN PART START ======-->
+    <!--====== LOGIN USER PART START ======-->
 
-    <section class="pt-120" id="login">
+    <section class="pt-120" id="loginuser">
         <div class="login-box">
-            <h2>Login</h2>
+            <h2>Login User</h2>
             <form>
                 <div class="user-box">
-                    <input type="text" id="username" name="username">
+                    <input type="text" id="username-user" name="username-user">
                     <label>Username</label>
                 </div>
                 <div class="user-box">
-                    <input type="password" id="password" name="password">
+                    <input type="password" id="password-user" name="password"-user>
                     <label>Password</label>
                 </div>
-                <a type="submit" id="button"  onclick="PostSignUp()">
+                <a type="submit" id="button"  onclick="LoginUser()">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -146,43 +146,103 @@
                     Submit
                 </a>
                 <div style="visibility: hidden;" class="container">
-                    <div class="notification is-primary" id="surat"></div>
+                    <div class="notification is-primary" id="user"></div>
                    </div>
             </form>
         </div>
     </section>
 
-    <!--====== LOGIN PART ENDS ======-->
+    <!--====== LOGIN USER PART ENDS ======-->
 
-    <!--====== REGISTRASI PART START ======-->
+    <!--====== LOGIN ADMIN PART START ======-->
 
-<section id="registrasi" class="pt-150 relative">
+    <section class="pt-120" id="loginadmin">
+        <div class="login-box">
+            <h2>Login Admin</h2>
+            <form>
+                <div class="user-box">
+                    <input type="text" id="username-admin" name="username-admin">
+                    <label>Username</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" id="password-admin" name="password-admin">
+                    <label>Password</label>
+                </div>
+                <a type="submit" id="button"  onclick="LoginAdmin()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Submit
+                </a>
+                <div style="visibility: hidden;" class="container">
+                    <div class="notification is-primary" id="admin"></div>
+                   </div>
+            </form>
+        </div>
+    </section>
+
+    <!--====== LOGIN ADMIN PART ENDS ======-->
+
+    <!--====== REGISTRASI USER PART START ======-->
+
+<section id="registrasi-user" class="pt-150 relative">
     <div class="login-box">
-        <h2>Registrasi</h2>
+        <h2>Registrasi User</h2>
         <form>
             <div class="user-box">
-                <input type="text" id="user1name" name="user1name" required>
+                <input type="text" id="username-regis-user" name="username-regis-user" required>
                 <label>Username</label>
             </div>
             <div class="user-box">
-                <input type="password" id="pass1word" name="pass1word" required>
+                <input type="password" id="password-regis-user" name="password-regis-user" required>
                 <label>Password</label>
             </div>
-            <a type="submit" id="registerButton">
+            <a type="submit" id="button"  onclick="RegistrasiUser()">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Submit
             </a>
-            <div class="container">
-                <div class="notification is-primary" id="surat"></div>
+            <div style="visibility: hidden;" class="container">
+                <div class="notification is-primary" id="regis-user"></div>
                </div>
         </form>
     </div>
 </section>
 
-    <!--====== REGISTRASI PART ENDS ======-->
+    <!--====== REGISTRASI USER PART ENDS ======-->
+
+    <!--====== REGISTRASI ADMIN PART START ======-->
+
+<section id="registrasi-admin" class="pt-150 relative">
+    <div class="login-box">
+        <h2>Registrasi Admin</h2>
+        <form>
+            <div class="user-box">
+                <input type="text" id="username-regis-admin" name="username-regis-admin" required>
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" id="password-regis-admin" name="password-regis-admin" required>
+                <label>Password</label>
+            </div>
+            <a type="submit" id="button"  onclick="RegistrasiAdmin()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </a>
+            <div style="visibility: hidden;" class="container">
+                <div class="notification is-primary" id="regis-admin"></div>
+               </div>
+        </form>
+    </div>
+</section>
+
+    <!--====== REGISTRASI ADMIN PART ENDS ======-->
 
     <!--====== PROFILE PART START ======-->
 
@@ -506,12 +566,20 @@
 
     <!--====== TEAM PART ENDS ======-->
 
-    <section id="berhasil-login" class="team_area bg-gray pt-120 pb-120">
-        <h1>Berhasil Login</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <section id="berhasil-login-user" class="team_area bg-gray pt-120 pb-120">
+        <h1>Berhasil Login User</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </section>
 
-    <section id="gagal-login" class="team_area bg-gray pt-120 pb-120">
-        <h1>Gagal Login</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <section id="berhasil-login-admin" class="team_area bg-gray pt-120 pb-120">
+        <h1>Berhasil Login Admin</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+
+    <section id="password-salah" class="team_area bg-gray pt-120 pb-120">
+        <h1>Password Salah</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+
+    <section id="password-hash-gagal" class="team_area bg-gray pt-120 pb-120">
+        <h1>Gagal hash password</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </section>
 
     <section id="berhasil-registrasi" class="team_area bg-gray pt-120 pb-120">
@@ -563,46 +631,6 @@
 
     <!--====== Main js ======-->
     <script type="module" src="assets/js/post.js"></script>
-
-    <script>
-        document.getElementById("registerButton").addEventListener("click", register);
-
-function register() {
-    const apiUrl = "https://asia-southeast2-gis3-401509.cloudfunctions.net/MembuatUser";
-    const username = document.getElementById("user1name").value;
-    const password = document.getElementById("pass1word").value;
-
-    const data = {
-        username: username,
-        password: password,
-        role: "user"
-    };
-
-    fetch(apiUrl, {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-    .then(response => {
-        if (response.ok) {
-            return response.json();
-        } else {
-            throw new Error('Pendaftaran gagal');
-        }
-    })
-    .then(status => {
-        if (status.true) {
-        } else {
-            window.location.href = "#berhasil-registrasi";
-        }
-    })
-    .catch(error => {
-        console.error("Error:", error);
-    });
-}
-    </script>
 </body>
 
 </html>
