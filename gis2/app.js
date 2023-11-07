@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const map = new ol.Map({
-        target: 'map',
+        target: 'pam',
         layers: [
             new ol.layer.Tile({
                 source: new ol.source.OSM()

@@ -1,4 +1,4 @@
-export let URLGeoJson = "https://us-central1-gis3-401509.cloudfunctions.net/manggilmongo";
+export let URLGeoJson = "https://asia-southeast2-gis3-401509.cloudfunctions.net/AmbilDataGeojson";
 export let tableTag="tr";
 export let tableRowClass="content is-small";
 export let tableTemplate=`

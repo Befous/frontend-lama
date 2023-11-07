@@ -22,6 +22,6 @@ function responseData(result) {
         alert("Password Salah");
     }
     if (result.message == "Selamat Datang") {
-        window.location.href = "#berhasil-login-user";
+        window.location.href = "./beranda";
     }
 }

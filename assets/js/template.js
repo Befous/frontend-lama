@@ -90,7 +90,7 @@ class MyHeaderAfterLogin extends HTMLElement {
                                         <a class="page-scroll" href="../gis4">Tugas 4</a>
                                     </li>
                                     <li class="nav-item ml-5 lg:ml-11">
-                                        <a class="page-scroll" href="../gis5">Tugas 5</a>
+                                        <a class="page-scroll" href="../swagger">Tugas 5</a>
                                     </li>
                                     <li class="nav-item ml-5 lg:ml-11">
                                         <a class="page-scroll" href="../gis6">Tugas 6</a>
