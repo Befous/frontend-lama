@@ -1,22 +1,25 @@
 import { postNoToken } from "./api.js";
 import {setInner,getValue} from "https://jscroot.github.io/element/croot.js";
 
-export default function RegistrasiAdmin(){
+export default function Registrasi(){
     let target_url = "https://asia-southeast2-gis3-401509.cloudfunctions.net/MembuatUser";
     let datainjson = {
-        "username": getValue("username-regis-user"),
-        "password": getValue("password-regis-user"),
+        "username": getValue("username-regis"),
+        "password": getValue("password-regis"),
         "role": "user"
     }
 
-    postNoToken(target_url,datainjson,responseDataAdmin);
+    postNoToken(target_url,datainjson,responseData);
 
 }
 
-function responseDataAdmin(result) {
-    setInner("regis-user", result.message);
+function responseData(result) {
+    setInner("regis", result.message);
+    if (result.message == "Username telah dipakai") {
+        alert("Username telah dipakai");
+    }
     if (result.message == "Gagal Hash Password") {
-        window.location.href = "#password-hash-gagal";
+        alert("Gagal Hash Password");
     }
     if (result.message == "Berhasil Input data") {
         window.location.href = "#berhasil-registrasi";

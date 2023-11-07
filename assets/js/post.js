@@ -1,9 +1,5 @@
-import LoginUser from "./postLoginUser.js";
-import LoginAdmin from "./postLoginAdmin.js";
-import RegistrasiUser from "./postRegistrasiUser.js";
-import RegistrasiAdmin from "./postRegistrasiAdmin.js";
+import Login from "./postLogin.js";
+import Registrasi from "./postRegistrasi.js";
 
-window.LoginUser = LoginUser;
-window.LoginAdmin = LoginAdmin;
-window.RegistrasiUser = RegistrasiUser;
-window.RegistrasiAdmin = RegistrasiAdmin;
+window.Login = Login;
+window.Registrasi = Registrasi;
