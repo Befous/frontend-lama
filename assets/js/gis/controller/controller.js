@@ -1,6 +1,7 @@
-import {setInner,addChild } from "https://jscroot.github.io/element/croot.js";
+import {addChild } from "../../element.js";
 import {tableTemplate, tableRowClass, tableTag} from "../template/template.js";
 import {map} from '../config/configpeta.js';
+import Draw from 'https://cdn.skypack.dev/ol/interaction/Draw.js';
 
 export function isiRowPoint(value){
     if (value.geometry.type === "Point") {
@@ -26,20 +27,6 @@ export function isiRowPolyline(value){
     }
 }
 
-// export function MakeGeojsonFromAPI(value) {
-//     // Create a GeoJSON feature collection
-//     const geojsonFeatureCollection = {
-//         type: "FeatureCollection",
-//         features: value
-//     };
-
-//     // Convert the GeoJSON feature collection to a JSON string
-//     const geojsonString = JSON.stringify(geojsonFeatureCollection, null, 2);
-
-//     // Return the JSON string
-//     return geojsonString;
-// }
-
 export function MakeGeojsonFromAPI(value) {
     const geojsonFeatureCollection = {
         type: "FeatureCollection",
@@ -54,45 +41,18 @@ export function MakeGeojsonFromAPI(value) {
 
     const link = document.createElement("a");
     link.href = url;
-    // link.download = fileName || "data.geojson"; 
-
-    // document.body.appendChild(link);
 
     return link;
 }
 
-
-export function AddLayerToMAP(geojson){ 
-    const Sourcedata = new ol.source.Vector({
-        url: geojson,
-        format: new ol.format.GeoJSON(),
+export function drawer(geojson) {
+    const source = new ol.source.Vector({
+        wrapx: false
       });
-
-    const geojsonFeatureCollection = {
-        type: "FeatureCollection",
-        features: Sourcedata
-    };
-
-    console.log(geojsonFeatureCollection)
-
-    //buat layer untuk point, polygon, dan polyline
-    const layerpoint = new ol.layer.Vector({
-        source: Sourcedata,
-        style: new ol.style.Style({
-            image: new ol.style.Icon({
-                src: 'img/icog.png', 
-                scale: 0.3, 
-                opacity: 1
-            })
-        })
-    });
-    
-    const polylayer = new ol.layer.Vector({
-        source: Sourcedata,
+      const Stroke = new ol.layer.Vector({
+        source: source,
         style: function (feature) {
             const featureType = feature.getGeometry().getType();
-            
-           
             if (featureType === 'Polygon') {
                 return new ol.style.Style({
                     stroke: new ol.style.Stroke({
@@ -112,12 +72,85 @@ export function AddLayerToMAP(geojson){
         }
     });
 
+    const typeSelect = document.getElementById('type');
+
+    let draw; // global so we can remove it later
+    typeSelect.onchange = function () {
+    map.removeInteraction(draw);
+    addInteraction();
+    };
+
+    document.getElementById('undo').addEventListener('click', function () {
+    draw.removeLastPoint();
+    });
+    function addInteraction() {
+        const value = typeSelect.value;
+        if (value !== 'None') {
+            draw = new Draw({
+            source: source,
+            type: typeSelect.value,
+            });
+            map.addInteraction(draw);
+        }
+        }
+    addInteraction();
+    map.addLayer(Stroke);
+}
+
+
+export function AddLayerToMAP(geojson){ 
+    const Sourcedata = new ol.source.Vector({
+        url: geojson,
+        format: new ol.format.GeoJSON(),
+        // wrapx : false
+      });
+
+    //buat layer untuk point, polygon, dan polyline
+    const layerpoint = new ol.layer.Vector({
+        source: Sourcedata,
+        style: new ol.style.Style({
+            image: new ol.style.Icon({
+                src: 'img/icog.png', 
+                scale: 0.3, 
+                opacity: 1
+            })
+        })
+    });
+    
+    const polylayer = new ol.layer.Vector({
+        source: Sourcedata,
+        style: function (feature) {
+            const featureType = feature.getGeometry().getType();
+            if (featureType === 'Polygon') {
+                return new ol.style.Style({
+                    stroke: new ol.style.Stroke({
+                        color: 'blue', 
+                        width: 2
+                    })
+                });
+            } else {
+                
+                return new ol.style.Style({
+                    stroke: new ol.style.Stroke({
+                        color: 'red', 
+                        width: 1
+                    })
+                });
+            }
+        }
+    });
+
     map.addLayer(polylayer);
-    map.addLayer(layerpoint);}
+    map.addLayer(layerpoint);
+    // drawer(Sourcedata)
+    
+}
+
 
 export function responseData(results){
     // console.log(results.features);
     // console.log(MakeGeojsonFromAPI(results))
+    // Addlayer()
     results.forEach(isiRowPoint);
     results.forEach(isiRowPolygon);
     results.forEach(isiRowPolyline);
