@@ -7,7 +7,7 @@ import {fromLonLat} from 'https://cdn.skypack.dev/ol/proj.js';
 import Overlay from 'https://cdn.skypack.dev/ol/Overlay.js';
 import {container} from 'https://jscroot.github.io/element/croot.js';
 
-const attributions = '<a href="https://petapedia.github.io/" target="_blank">&copy; PetaPedia Indonesia</a> ';
+const attributions = '<a href="https://befous.github.io/" target="_blank">&copy; Befous Indonesia</a> ';
 
 const place = [103.61061534308766,
   -1.6272725906014358];
@@ -51,4 +51,3 @@ export let map = new Map({
   target: 'map',
   view: defaultstartmap,
 });
-

@@ -3,8 +3,9 @@ import {toStringHDMS} from 'https://cdn.skypack.dev/ol/coordinate.js';
 import {overlay,map,popupinfo,idmarker} from '../config/configpeta.js';
 import {clickpopup} from '../template/template.js';
 import {insertMarker,deleteMarker} from './marker.js';
-import {setInner,textBlur,onClick, getValue,setValue} from 'https://jscroot.github.io/element/croot.js';
-import { postWithToken } from "https://jscroot.github.io/api/croot.js";
+import {setInner,textBlur, getValue,setValue} from '../../element.js';
+import { postBiasa } from "../../api.js";
+import {URLPostPoint} from '../template/template.js'
 
 
 export function onClosePopupClick() {
@@ -19,19 +20,32 @@ export function onDeleteMarkerClick() {
 }
 
 export function onSubmitMarkerClick() {
-    let long = getValue('long');
-    let lat = getValue('lat');
-    let name = getValue('name');
-    let data = {name, long,lat};
-    postWithToken("https://eogh9ma062dx9va.m.pipedream.net","Token","7d5120689dd697d93428fca139d940db",data,afterSubmitCOG);
-    overlay.setPosition(undefined);
-    textBlur('popup-closer');
-    insertMarker(name,long,lat);
+  let long = getValue('long');
+  let lat = getValue('lat');
+  let name = getValue('name');
+  let type = getValue('type');
+    let data = {
+      "type": "Feature",
+      "properties": {
+        "name": name
+      },
+      "geometry": {
+        "type": type,
+        "coordinates": [
+          parseFloat(long),parseFloat(lat)
+        ]
+      }
+    };
+    postBiasa(URLPostPoint,data,afterSubmitCOG);
+  overlay.setPosition(undefined);
+  textBlur('popup-closer');
+    insertMarker(name,long,lat,volume);
     idmarker.id=idmarker.id+1;
+  console.log(name)
 }
 
 function afterSubmitCOG(result){
-    console.log(result);
+    alert("Referesh page dan CTRL+F untuk mencari apakah data sudah masuk");
 }
 
 function popupInputMarker(evt) {

@@ -1,4 +1,5 @@
 export let URLGeoJson = "https://asia-southeast2-befous.cloudfunctions.net/Befous-AmbilDataGeojson";
+export let URLPostPoint = "https://asia-southeast2-befous.cloudfunctions.net/Befous-MembuatGeojsonPoint";
 export let tableTag="tr";
 export let tableRowClass="content is-small";
 export let tableTemplate=`

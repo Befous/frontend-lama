@@ -6,6 +6,14 @@ export function getValue(id){
     return document.getElementById(id).value;
 }
 
+export function textBlur(id){
+    document.getElementById(id).blur();
+}
+
+export function setValue(id,valuecontent){
+    return document.getElementById(id).value=valuecontent;
+}
+
 export function addChild(id,tag,classvalue,content){
     let el = document.createElement(tag);
     let classArray = classvalue.split(" ");
