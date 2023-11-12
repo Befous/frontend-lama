@@ -1,5 +1,5 @@
-import { postNoToken } from "./api.js";
-import {setInner,getValue} from "https://jscroot.github.io/element/croot.js";
+import { postBiasa } from "./api.js";
+import { setInner,getValue } from "./element.js";
 
 export default function Registrasi(){
     let target_url = "https://asia-southeast2-gis3-401509.cloudfunctions.net/MembuatUser";
@@ -22,6 +22,6 @@ function responseData(result) {
         alert("Gagal Hash Password");
     }
     if (result.message == "Berhasil Input data") {
-        window.location.href = "#berhasil-registrasi";
+        alert("Registrasi Berhasil");
     }
 }

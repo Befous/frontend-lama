@@ -1,5 +1,7 @@
 import Login from "./postLogin.js";
 import Registrasi from "./postRegistrasi.js";
+import checkCookie from "./postCheckCookie.js";
+import Logout from "./postLogout.js";
 
 //gis
 import { get } from "https://jscroot.github.io/api/croot.js";
@@ -12,6 +14,8 @@ import {getAllCoordinates} from './gis/controller/cog.js';
 
 window.Login = Login;
 window.Registrasi = Registrasi;
+window.Logout = Logout;
+window.checkCookie = checkCookie;
 
 //gis
 onClick('popup-closer',onClosePopupClick);
