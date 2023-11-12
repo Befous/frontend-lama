@@ -9,7 +9,7 @@ import { URLGeoJson } from "./gis/template/template.js";
 import { MakeGeojsonFromAPI, responseData, AddLayerToMAP } from "./gis/controller/controller.js";
 import {map} from './gis/config/configpeta.js';
 import {onClosePopupClick,onDeleteMarkerClick,onSubmitMarkerClick,onMapClick,onMapPointerMove,disposePopover} from './gis/controller/popup.js';
-import {onClick} from 'https://jscroot.github.io/element/croot.js';
+import {onClick} from './element.js';
 import {getAllCoordinates} from './gis/controller/cog.js';
 
 window.Login = Login;

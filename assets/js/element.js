@@ -22,6 +22,10 @@ export function addChild(id,tag,classvalue,content){
     document.getElementById(id).appendChild(el);
 }
 
+export function onClick(id,actionfunctionname){
+    document.getElementById(id).onclick = actionfunctionname;
+}
+
 function setClassValue(el,classvalue){
     el.classList.add(classvalue.trim());
 }
